@@ -1,0 +1,16 @@
+i=0
+n= input("Enter the number of processes: ")
+processes = []
+
+for i in range(int(n)):
+	processes[i][0] = input("Enter Process ID: ")
+        processes[i][1] = input("Enter Arrival time of ")
+	processes[i][2] = input("Enter Burst time of ")
+	processes[i][3] = input("Enter prority ")
+	
+processes.sort(key=lambda processes:processes[3])
+processes.sort(key=lambda processes:processes[1])
+
+for i in range(int(n)):
+	print(processes[i][0]," Arrival Time = ",processes[i][1],"Burst Time = ",processes[i][2])
+
