@@ -1,0 +1,15 @@
+n=0
+pro = []
+i=0
+n= int(raw_input("Enter no of processes: "))
+for i in range(n):
+	pro.append([])
+	pro[i].append(raw_input("enter name of pro: "))
+	pro[i].append(int(raw_input("enter arrival time: ")))
+ 	pro[i].append(int(raw_input("enter burst time: ")))
+	pro[i].append(int(raw_input("enter prority: ")))
+
+pro.sort(key=lambda pro:pro[3])
+i=0
+for i in range(n):
+	print pro[i][0],'\t',pro[i][1],'\t',pro[i][2],'\t',pro[i][3],'\n'
